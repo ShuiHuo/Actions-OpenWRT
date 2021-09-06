@@ -13,6 +13,6 @@
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
-git apply --check ../patch/0001-config_generate.patch && git apply ../patch/0001-config_generate.patch
+git apply --check $GITHUB_WORKSPACE/patch/0001-config_generate.patch && git apply $GITHUB_WORKSPACE/patch/0001-config_generate.patch
 
-cp -R ../add_package/lean package/lean
+cp -R $GITHUB_WORKSPACE/add_package/lean package/lean
